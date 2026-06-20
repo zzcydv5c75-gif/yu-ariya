@@ -5,7 +5,7 @@ body {
     #ffbfdb 70%,
     #ffbfdb 100%
     );
-    font-family: "Baloo 2", cursive;
+    font-family: "Baloo 2", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@ body {
 /*Title*/
 h1 {
     font-size: 3rem;
-    font-family: "Cherry Bomb One", cursive;
+    font-family: "Cherry Bomb One", sans-serif;
     font-weight: 600;
     color:#ff47b2;
     margin-bottom: 10px;
@@ -124,7 +124,7 @@ button {
     cursor: pointer;
     transition: all 0.3s ease;
     margin: 5px;
-    font-family: "Baloo 2", cursive;
+    font-family: "Baloo 2", sans-serif;
 }
 button:hover {
     background: #ff9ec5;
