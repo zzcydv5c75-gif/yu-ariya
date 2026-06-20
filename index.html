@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="estar.png">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&display=swap" rel="stylesheet">
 <body>
     <div class="sakura-container"></div>
     <div class="card">
-        <h1>Hehloe, I'm <b>Aaliyah</b></h1>
+        <h1>Hehloe, I'm <b>Aaliyah</b>🌷</h1>
         <p class="intro">
             Welcome to my own personal websiittteeee! <3
         </p>
@@ -20,6 +19,7 @@
             <button onclick="showAbout()">About Me</button>
             <button onclick="showSocials()">Socials</button>
             <button onclick="showArtworks()">Artworks</button>
+            <button id="musicBtn" onclick="toggleMusic()">▶️</button>
         </div>
     </div>
     <div id="socialBox" class="popup">
@@ -51,12 +51,19 @@
         </div>
         <div class="artworks">
             <img src="IMG_4753.JPG" alt="A Boy's Whimsical Reverie">
-            <p>A painting i worked on 3<br>years ago. My first ever oil painting.</p>
+            <p>A painting i worked on 3<br>years ago. My first ever painting.</p>
         </div>
     </div>
     <audio id="clickSound" src="universfield-bottle-opening-wine-cork-pop-352701.mp3" preload="auto"></audio>
+    <audio id="bgMusic" loop>
+    <source src="mirostar-lofi-beats-531504.mp3" type="audio/mpeg">
+</audio>
     <script>
         const clickSound = document.getElementById("clickSound");
+        const bgMusic = document.getElementById("bgMusic");
+        const musicBtn = document.getElementById("musicBtn");
+
+        bgMusic.volume = 0.50;
 
 function playSound() {
     clickSound.currentTime = 0;
@@ -120,6 +127,17 @@ function createPetal() {
 }
 
 setInterval(createPetal, 300);
+function toggleMusic() {
+    playSound();
+
+    if (bgMusic.paused) {
+        bgMusic.play();
+        musicBtn.textContent = "⏸";
+    } else {
+        bgMusic.pause();
+        musicBtn.textContent = "▶";
+    }
+}
     </script>
 </body>
 </html>
