@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaliyah Claud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Hehloe, I'm <b>Aaliyah</b></h1>
+        <p class="intro">
+            Welcome to my own personal websiittteeee! <3
+        </p>
+        <div class="menu">
+            <button onclick="showAbout()">About Me</button>
+            <button onclick="showSocials()">Socials</button>
+            <button onclick="showArtworks()">Artworks</button>
+        </div>
+    </div>
+    <div id="socialBox" class="popup">
+        <h2>My Socials</h2>
+        <ul>
+            <li><a href="https://www.instagram.com/yuari.ya/?hl=en" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/aaliyahclaud.quibo">Facebook</a></li>
+            <li><a href="https://www.tiktok.com/@axliyh_" target="_blank">TikTok</a></li>
+    </div>
+    <div id="aboutBox" class="popup">
+        <h2>About Me</h2>
+        <img src="me pic.png" class="profile">
+        <p><b>Full Name:</b> Aaliyah Claud G. Quibo</p>
+        <p><b>Birthdate:</b> September 1, 2011</p>
+        <p><b>Age:</b> 14</p>
+        <p><b>Zodiac Sign:</b> Virgo</p>
+        <p><b>Dream Job:</b> Architect</p>
+        <p>Hiii, I'm Aaliyah. I'm a 14 year old Visual<br>Artist in the SPA Program. I luv cheesy fries<br>n burgers w/ my lovely iced caramel macchiato.<br>I also love travelling and doing fun stuff with<br>family n friends!<3</p>
+    </div>
+    <div id="artworksBox" class="popup">
+        <h2>My Artworks</h2>
+        <div class="artworks">
+            <img src="b6438e7d7467e0580365157db5e7f724.png" alt="Filipino Struggles Through History">
+            <p>Og artwork by Carlos Botong<br>Francisco, recreated by me</p>
+        </div>
+        <div class="artworks">
+            <img src="IMG_4754.PNG" alt="INB">
+            <p>Me and my besties lol, I love<br>these pips</p>
+        </div>
+        <div class="artworks">
+            <img src="IMG_4753.JPG" alt="A Boy's Whimsical Reverie">
+            <p>A painting i worked on 3<br>years ago. My first ever painting.</p>
+        </div>
+    </div>
+    <script>
+        function showSocials() {
+            const box = document.getElementById('socialBox');
+
+            if (box.style.display === 'block') {
+                box.style.display = 'none';
+            } else {
+                box.style.display = 'block';
+            }
+        }
+        function showAbout() {
+            const box = document.getElementById('aboutBox');
+
+            if (box.style.display === 'block') {
+                box.style.display = 'none';
+            } else {
+                box.style.display = 'block';
+            }
+        }
+        function showArtworks() {
+            const box = document.getElementById('artworksBox');
+
+            if (box.style.display === 'block') {
+                box.style.display = 'none';
+            } else {
+                box.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
