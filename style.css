@@ -12,17 +12,57 @@ body {
     min-height: 100vh;
     margin: 0;
 }
-/*Main card*/
-.card {
-    background-color: #fffdfe;
-    width: 550px;
+/*Buttons*/
+.menu button {
+    text-decoration: none;
+    background: #ffd6e9;
+    color: #555;
+    padding: 12px 18px;
+    border-radius: 18px;
+    border: 2px solid #ff9ed3;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+/*Hover effect*/
+.menu button:hover {
+    transform: translateY(-4px);
+    background: #ff9ecd;
+    box-shadow: 0px 4px 10px rgba(255, 93, 166, 0.4);
+}
+.popup {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.popup h2 {
+    display: none;
+    margin-top: 20px;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.profile {
+    width: 180px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.artworks-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+    width: 350px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: #fff;
+    padding: 20px;
     border-radius: 25px;
-    padding: 50px;
-    border: 3px solid #ffffff;
-    text-align: center;
-    box-shadow:
-        8px 8px 0px #ff7eba,
-        0px 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 }
 /*Title*/
 h1 {
@@ -47,18 +87,18 @@ h1 {
     flex-wrap: wrap;
 }
 /*Buttons*/
-.menu a {
+.menu button {
     text-decoration: none;
     background: #ffd6e9;
     color: #555;
     padding: 12px 18px;
     border-radius: 18px;
     border: 2px solid #ff9ed3;
-    font-size: 500;
+    font-weight: 500;
     transition: 0.3s ease;
 }
 /*Hover effect*/
-.menu a:hover {
+.menu button:hover {
     transform: translateY(-4px);
     background: #ff9ecd;
     box-shadow: 0px 4px 10px rgba(255, 93, 166, 0.4);
@@ -106,7 +146,7 @@ h1 {
 }
 .artwork img {
     width: 120px;
-    height: autos;
+    height: auto;
     border-radius: 15px;
     display: block;
     margin: 0 auto;
@@ -133,4 +173,55 @@ button:hover {
 }
 button:active {
     transform: scale(0.95);
+}
+/*Main card*/
+.card {
+    background-color: #fffdfe;
+    width: 550px;
+    border-radius: 25px;
+    padding: 50px;
+    border: 3px solid #ffffff;
+    text-align: center;
+    box-shadow:
+        8px 8px 0px #ff7eba,
+        0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+/* Sakura background */
+.sakura-container {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.sakura {
+    position: absolute;
+    top: -50px;
+    width: 18px;
+    height: 18px;
+    background: #ffb7d5;
+    border-radius: 60% 40% 70% 30%;
+    opacity: 0.8;
+    animation: fall linear forwards;
+}
+
+.sakura::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: inherit;
+    border-radius: inherit;
+    transform: rotate(45deg);
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) translateX(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(110vh) translateX(100px) rotate(360deg);
+    }
 }
